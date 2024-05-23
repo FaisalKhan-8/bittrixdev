@@ -30,8 +30,8 @@ body {
   border-radius: 30px;
   top: 50%;
   left: 50%;
-  width: 95%;
-  height: 100%;
+  width: 98%;
+  height: 95%;
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1; /* Ensure the video stays in the background */

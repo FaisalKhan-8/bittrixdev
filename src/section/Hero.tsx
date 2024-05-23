@@ -17,10 +17,10 @@ const Hero = () => {
             type='video/mp4'
           />
         </video>
-        <div className='absolute w-[90%] bottom-[10%] border h-[50%]'>
+        <div className='absolute w-[90%] bottom-[10%] border h-[60%]'>
           <div className='flex items-center justify- justify-between p-4'>
             <div className='flex flex-col items-left justify-center'>
-              <h1 className=' text-[6rem] uppercase font-light text-[#bcb8b1]'>
+              <h1 className=' text-[5rem] uppercase font-light text-[#bcb8b1]'>
                 WE CREATE Apps
               </h1>
               <div className='flex items-center justify-center gap-2'>

@@ -13,16 +13,24 @@ const sectionLinks = [
 
 const Navbar = () => {
   return (
-    <nav className=' w-full flex items-center justify-center mt-10'>
-      <div className='w-[90%] grid grid-cols-3 mt-20  px-4 z-10 absolute'>
+    <nav className=' w-full flex items-center justify-center'>
+      <div className='w-[90%] grid grid-cols-3 mt-36 px-4 z-10 absolute'>
         <div className='flex items-center justify-start'>
-          <Image src={Logo} alt='logo' className='w-[50px] rounded-full' />
+          <Image
+            src={Logo}
+            alt='logo'
+            className='w-[50px] rounded-full'
+          />
         </div>
 
         <ul className=' bg-primary-color flex items-center justify-evenly border rounded-3xl p-2 w-full'>
           {sectionLinks.map(({ name, link }, index) => (
-            <li key={name} className='text-text-black font-semibold'>
-              <Link href={link} className=''>
+            <li
+              key={name}
+              className='text-text-black font-semibold'>
+              <Link
+                href={link}
+                className=''>
                 {name}
               </Link>
             </li>
