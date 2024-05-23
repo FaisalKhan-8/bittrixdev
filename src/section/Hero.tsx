@@ -8,6 +8,7 @@ const Hero = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quaerat
         ratione eos necessitatibus! hello how are you
       </p>
+      <p>this is para 2</p>
     </div>
   );
 };
