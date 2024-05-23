@@ -1,4 +1,3 @@
-import { url } from 'inspector';
 import React from 'react';
 import { HiArrowLongDown } from 'react-icons/hi2';
 
@@ -31,7 +30,7 @@ const Hero = () => {
                   Web for human
                 </h1>
               </div>
-              <h1 className='text-[5rem] font-medium  text-primary-color uppercase'>
+              <h1 className='text-[5rem] font-medium text-primary-color uppercase'>
                 Not for{' '}
                 <span className=' line-through font-light text-red-500'>
                   Robots
