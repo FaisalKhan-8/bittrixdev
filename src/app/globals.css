@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.loader {
+  color: var(--theme-color);
+  fill: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 90vh;
+  svg {
+    height: 10rem;
+    width: 10rem;
+  }
+}
