@@ -6,7 +6,7 @@ const Hero = () => {
       Hero section
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quaerat
-        ratione eos necessitatibus!
+        ratione eos necessitatibus! hello how are you
       </p>
     </div>
   );
