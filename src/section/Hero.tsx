@@ -9,6 +9,7 @@ const Hero = () => {
         ratione eos necessitatibus! hello how are you
       </p>
       <p>this is para 2</p>
+      <p>Hey there</p>
     </div>
   );
 };
