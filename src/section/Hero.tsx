@@ -2,6 +2,8 @@ import React from 'react';
 import { HiArrowLongDown } from 'react-icons/hi2';
 
 const Hero = () => {
+  //TODO:https://vimeo.com/925064096   --link for hero section absolute positioning videos
+
   return (
     <div className='h-screen flex items-center justify-center relative '>
       <div className='w-full h-full flex items-center justify-center overflow-hidden absolute top-0 '>
