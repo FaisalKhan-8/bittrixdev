@@ -47,10 +47,10 @@ const Hero = () => {
                   className=' w-[400px] relative rounded-3xl '>
                   <source src='/assets/videos/hero2.mp4' type='video/mp4' />
                 </video>
+                <div className='w-[70px] h-[70px] cursor-pointer bg-white opacity-70 absolute z-20 rounded-full left-[-7%] top-[-10%] flex items-center justify-center '>
+                  <IoMdPlay className='text-2xl  text-black ' />
+                </div>
               </div>
-              <div className='w-[70px] h-[70px] cursor-pointer bg-white opacity-70 absolute z-20 rounded-full right-[21%] bottom-[33%] flex items-center justify-center '>
-                <IoMdPlay className='text-2xl  text-black ' />
-              </div>{' '}
             </div>
           </div>
           <div className='absolute right-10 top-[30%] z-10'>
