@@ -16,8 +16,10 @@ const AboutUs = () => {
         </div>
         <div className='w-full h-full flex items-center justify-between'>
           <div className='grid grid-cols-2 grid-rows-2 gap-3 h-full'>
-            {about.map((curr) => (
-              <div className='aboutItem  flex flex-col items-left justify-end  p-4'>
+            {about.map((curr, i) => (
+              <div
+                key={i}
+                className='aboutItem  flex flex-col items-left justify-end  p-4'>
                 <video autoPlay loop muted playsInline className='serviceVideo'>
                   <source src={curr.video} type='video/mp4' />
                 </video>
