@@ -6,10 +6,10 @@ html,
 body {
   scroll-behavior: smooth !important;
 }
-
+/* 
 ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .loader {
   color: var(--theme-color);

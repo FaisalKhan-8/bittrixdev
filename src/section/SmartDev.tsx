@@ -28,7 +28,7 @@ const SmartDev = () => {
             </span>
           </div>
         </div>
-        <div className='flex items-center  justify-center absolute w-full top-[30%] '>
+        <div className='flex items-center  justify-center absolute  top-[30%] left-[40%] '>
           <Image src={phone1} alt='phonn1' className='w-[300px] ' />
           <Image
             src={phone2}
