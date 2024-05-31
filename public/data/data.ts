@@ -1,3 +1,5 @@
+import { title } from 'process';
+
 export const services = [
   {
     title: 'Mobile development',
@@ -40,5 +42,37 @@ export const about = [
     title: '+280',
     description: 'Team members all over the world',
     video: '/assets/videos/Snake.mp4',
+  },
+];
+
+export const portfolio = [
+  {
+    id: 1,
+    title: 'Title',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nibh mauris cursus mattis molestie. Nunc sed velit dignissim sodales.',
+    video: '/assets/videos/portfolio-bg-1.mp4',
+  },
+  {
+    id: 2,
+    title: 'Title',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nibh mauris cursus mattis molestie. Nunc sed velit dignissim sodales.',
+    video: '/assets/videos/portfolio-bg-2.mp4',
+  },
+  {
+    id: 3,
+    title: 'Title',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nibh mauris cursus mattis molestie. Nunc sed velit dignissim sodales.',
+    video: '/assets/videos/portfolio-bg-3.mp4',
+  },
+
+  {
+    id: 4,
+    title: 'Title',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nibh mauris cursus mattis molestie. Nunc sed velit dignissim sodales.',
+    video: '/assets/videos/portfolio-bg-4.mp4',
   },
 ];
