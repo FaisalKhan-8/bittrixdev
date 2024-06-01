@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
       </div>
       <Marquee className='mt-5'>
-        <h1 className='text-[10rem] font-semibold uppercase text-secondary-color'>
+        <h1 className='text-[10rem] font-semibold uppercase text-primary-bg-color'>
           I can be a React component, multiple React components, or just some
           text.
         </h1>
