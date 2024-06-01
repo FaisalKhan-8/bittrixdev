@@ -6,8 +6,8 @@ const SideNav = () => {
     { name: 'Home', link: '/' },
     { name: 'Our Services', link: '/#services' },
     { name: 'About Us', link: '/#about' },
-    { name: 'Portfolio', link: '/#testimonial' },
-    { name: 'Reviews', link: '/#reviews' },
+    { name: 'Portfolio', link: '/#latestCase' },
+    { name: 'Reviews', link: '/#testimonial' },
     { name: 'Contact Us', link: '/#contact' },
   ];
   return (
