@@ -9,7 +9,7 @@ interface VortexProps {
   containerClassName?: string;
   particleCount?: number;
   rangeY?: number;
-  baseHue?: number;
+  baseHue?: any;
   baseSpeed?: number;
   rangeSpeed?: number;
   baseRadius?: number;
