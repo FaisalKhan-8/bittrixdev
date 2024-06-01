@@ -8,7 +8,7 @@ const Hamburger = () => {
   };
   return (
     <div
-      className={`bg-black w-[40px] h-[40px] rounded-full flex flex-col items-center justify-center transition duration-300 ease-in-out delay-300 cursor-pointer   ${
+      className={` bg-primary-bg-color  w-[40px] h-[40px] rounded-full flex flex-col items-center justify-center transition duration-300 ease-in-out delay-300 cursor-pointer   ${
         toggle ? 'gap-0 rotate-45' : 'gap-2 '
       }`}
       onClick={handleClick}>

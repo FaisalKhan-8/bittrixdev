@@ -15,11 +15,11 @@ const Navbar = () => {
   return (
     <nav className=' w-full flex items-center justify-center'>
       <div className='w-[90%] grid grid-cols-3 mt-36 px-4 z-10 absolute'>
-        <div className='flex items-center justify-start'>
+        <div className='flex items-center justify-start '>
           <Image
             src={Logo}
             alt='logo'
-            className='w-[50px] rounded-full'
+            className='w-[50px] rounded-full border border-primary-bg-color animate-pulse '
           />
         </div>
 
