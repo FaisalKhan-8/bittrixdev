@@ -10,10 +10,7 @@ const Hero = () => {
       <div className='h-screen flex items-center justify-center relative '>
         <div className='w-full h-full flex items-center justify-center overflow-hidden absolute top-0 '>
           <video
-            autoPlay
-            loop
-            muted
-            playsInline
+           autoPlay loop muted playsInline
             className='background-video relative '>
             <source src='/assets/videos/hero.mp4' type='video/mp4' />
           </video>
