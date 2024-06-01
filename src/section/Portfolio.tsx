@@ -10,7 +10,7 @@ const Portfolio = () => {
       <div className='w-full h-full flex flex-col items-start justify-start gap-5  p-10 '>
         <div className=' flex flex-col items-left justify-center gap-5 w-full'>
           <h1 className='text-xl'>03 — Our Portfolio </h1>
-          <h3 className='text-5xl'>We don't do cookie cutter solutions</h3>
+          <h3 className='text-5xl'>We don&apos;t do cookie cutter solutions</h3>
           <p className=' text-3xl text-text-color w-[35%] text-wrap font-light'>
             Our user-centered design encourages productivity and boosts revenue.
           </p>
@@ -18,7 +18,7 @@ const Portfolio = () => {
         <div className='w-full h-full flex items-center justify-center'>
           <div className=' h-full gap-10 grid md:grid-cols-2  sm:grid-cols-1'>
             {portfolio.map((curr, i) => i <=1 && (
-              <CardContainer className='inter-var'>
+              <CardContainer key={i} className='inter-var'>
                 <CardBody className='bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-4 border  '>
                   <CardItem
                     translateZ='50'
