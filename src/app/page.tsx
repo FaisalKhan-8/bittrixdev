@@ -31,7 +31,7 @@ export default function Home() {
             <Service />
             <AboutUs />
             <SmartDev />
-            <HoldingPhone />
+            {/* <HoldingPhone /> */}
             <Portfolio />
             <LatestCase />
             <Testimonial />
