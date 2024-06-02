@@ -16,7 +16,7 @@ const Hero = () => {
           </video>
           <div className='absolute w-[90%] md:bottom-[10%]  h-[60%] flex items-center justify-between'>
             <div className='flex items-center justify- justify-between p-4'>
-              <div className='flex flex-col items-left justify-center'>
+              <div className='flex flex-col gap-2 items-left justify-center'>
                 <h1 className=' md:text-[5rem] text-3xl uppercase font-light text-primary-color'>
                   WE CREATE Apps
                 </h1>
@@ -24,7 +24,7 @@ const Hero = () => {
                   <div className='bg-white p-5 rounded-full flex items-center justify-center'>
                     <HiArrowLongDown className=' text-5xl' />
                   </div>
-                  <h1 className='md:text-[6rem] text-5xl   text-primary-color font-medium uppercase'>
+                  <h1 className='md:text-[6rem] text-5xl  text-primary-color font-medium uppercase'>
                     Web for human
                   </h1>
                 </div>
@@ -50,7 +50,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className='md:absolute right-10 top-[30%] z-10 hidden'>
+          <div className='md:block absolute right-10 top-[30%] z-10 hidden'>
             <SideNav />
           </div>
         </div>
