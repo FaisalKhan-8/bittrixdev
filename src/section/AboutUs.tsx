@@ -403,7 +403,7 @@ const AboutUs = () => {
       <div className="w-full h-full flex flex-col items-start justify-start gap-10 overflow-hidden p-10 ">
         <div className=" flex flex-col items-left justify-center gap-5 w-full">
           <h1 className="md:text-xl text-lg">02-About Us</h1>
-          <h3 className="md:text-5xl text-3xl">We Strive to Innovate</h3>
+          <h3 className="md:text-5xl text-2xl">We Strive to Innovate</h3>
           <hr  />
           <p className=" md:text-3xl text-xl md:w-[50%] text-text-color text-wrap font-light">
             <span className="font-semibold text-black">Solid Strategy</span>{" "}
@@ -432,7 +432,7 @@ const AboutUs = () => {
           </div>
           {/* Globe */}
        <div className="flex flex-row items-center justify-center py-20 h-[70vh] md:h-auto  bg-white relative w-full ">
-            <div className="max-w-5xl mx-auto w-full relative overflow-hidden h-full md:h-[42rem] px-4  ">
+            <div className="max-w-5xl mx-auto w-full relative overflow-hidden h-full md:h-[42rem] px-2  ">
               <motion.div
                 initial={{
                   opacity: 0,

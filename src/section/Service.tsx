@@ -30,10 +30,10 @@ const Service = () => {
                   type='video/mp4'
                 />
               </video>
-              <h1 className=' text-primary-color text-3xl uppercase font-bold'>
+              <h1 className=' text-primary-color md:text-3xl text-xl uppercase font-bold'>
                 {curr.title}
               </h1>
-              <p className=' text-text-color text-xl text-wrap h-36 w-full'>
+              <p className=' text-text-color md:text-xl text-wrap h-36 w-full mb-2'>
                 {curr.description}
               </p>
             </div>

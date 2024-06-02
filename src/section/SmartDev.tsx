@@ -45,7 +45,7 @@ const SmartDev = () => {
             <Image
               src={phone2}
               alt="phonn1"
-              className="md:w-[300px] w-[250px] object-cover absolute md:left-[50%] left-[30%] top-[30%] "
+              className="md:w-[300px] w-[250px] object-cover absolute md:left-[50%] left-[20%] top-[30%] "
             />
           </div>
         </div>

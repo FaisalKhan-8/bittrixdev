@@ -19,7 +19,7 @@ const Navbar = () => {
           <Image
             src={Logo}
             alt='logo'
-            className='w-[50px] rounded-full border border-primary-bg-color animate-pulse '
+            className='w-[50px] rounded-full border border-primary-bg-color animate-pulse'
           />
         </div>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
         </ul>
 
         <div className='flex items-center justify-end gap-2  '>
-          <span className='border p-2 rounded-full bg-primary-color text-gray-500'>
+          <span className='border p-2 md:block hidden rounded-full bg-primary-color text-gray-500'>
             Become a Client
           </span>
          

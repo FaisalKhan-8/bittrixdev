@@ -7,12 +7,12 @@ const Testimonial = () => {
   return (
     <div
       id="testimonial"
-      className="flex flex-col md:flex-row items-center justify-around md:h-screen h-[70vh] p-10 "
+      className="flex flex-col md:flex-row items-center justify-around h-screen  p-10 "
     >
       <div className="w-full h-full flex flex-col items-center justify-center  overflow-hidden ">
-        <div className=" flex flex-col  items-left justify-center md:gap-20 gap-10 px-10">
-          <h3 className="text-xl">05 — What Our Clients Say</h3>
-          <p className="text-xl md:w-[30%] text-text-color">
+        <div className=" flex flex-col  md:items-left justify-center md:gap-20 gap-10 px-10">
+          <h3 className="md:text-xl">05 — What Our Clients Say</h3>
+          <p className="md:text-xl md:w-[30%] text-text-color">
             We supply clients across the entire globe with improved network
             connections.
           </p>
@@ -20,12 +20,12 @@ const Testimonial = () => {
       </div>
       <div className="w-full flex items-center justify-center">
         <div className="flex flex-col gap-10 px-10">
-          <h3 className="md:text-5xl text-4xl font-semibold font-sans">br
+          <h3 className="md:text-5xl text-xl font-semibold font-sans text-pretty ">
             BittriXdev focuses on the end-user and helps improve retention. They
             excel in user experience and big-picture thinking.
           </h3>
           <hr className="" />
-          <div className="flex items-center justify-between">
+          <div className="flex md:flex-row flex-col gap-5 items-center justify-between">
             <div className="flex gap-5 ">
               <Image
                 src={testimonialCustomerImg}
