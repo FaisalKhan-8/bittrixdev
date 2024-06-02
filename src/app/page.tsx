@@ -22,7 +22,7 @@ export default function Home() {
     setTimeout(() => setShowContent(true), 450);
   };
   return (
-    <div className=''>
+    <div className=' overflow-hidden'>
       {showContent && (
         <>
           <Navbar />

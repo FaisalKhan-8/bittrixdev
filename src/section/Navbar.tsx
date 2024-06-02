@@ -14,7 +14,7 @@ const sectionLinks = [
 const Navbar = () => {
   return (
     <nav className=' w-full flex items-center justify-center'>
-      <div className='w-[90%] grid grid-cols-3 mt-36 px-4 z-10 absolute'>
+      <div className='w-[90%] grid md:grid-cols-3 grid-cols-2 mt-36 px-4 z-10 absolute'>
         <div className='flex items-center justify-start '>
           <Image
             src={Logo}
@@ -23,7 +23,7 @@ const Navbar = () => {
           />
         </div>
 
-        <ul className=' bg-primary-color flex items-center justify-evenly border rounded-3xl p-2 w-full'>
+        <ul className=' bg-primary-color md:flex hidden items-center justify-evenly border rounded-3xl p-2 w-full'>
           {sectionLinks.map(({ name, link }, index) => (
             <li
               key={name}
@@ -38,13 +38,11 @@ const Navbar = () => {
           <li className='text-text-black font-semibold'>Contact Us</li>
         </ul>
 
-        <div className='flex items-center justify-end gap-2'>
+        <div className='flex items-center justify-end gap-2  '>
           <span className='border p-2 rounded-full bg-primary-color text-gray-500'>
             Become a Client
           </span>
-          <button className='px-4 py-2 border border-secondary-color text-secondary-color rounded-lg'>
-            EN
-          </button>
+         
           <Hamburger />
         </div>
       </div>

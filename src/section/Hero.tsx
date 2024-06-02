@@ -14,28 +14,28 @@ const Hero = () => {
             className='background-video relative '>
             <source src='/assets/videos/hero.mp4' type='video/mp4' />
           </video>
-          <div className='absolute w-[90%] bottom-[10%]  h-[60%] flex items-center justify-between'>
+          <div className='absolute w-[90%] md:bottom-[10%]  h-[60%] flex items-center justify-between'>
             <div className='flex items-center justify- justify-between p-4'>
               <div className='flex flex-col items-left justify-center'>
-                <h1 className=' text-[5rem] uppercase font-light text-primary-color'>
+                <h1 className=' md:text-[5rem] text-3xl uppercase font-light text-primary-color'>
                   WE CREATE Apps
                 </h1>
                 <div className='flex items-center justify-center gap-2'>
                   <div className='bg-white p-5 rounded-full flex items-center justify-center'>
-                    <HiArrowLongDown className=' text-3xl' />
+                    <HiArrowLongDown className=' text-5xl' />
                   </div>
-                  <h1 className='text-[6rem]   text-primary-color font-medium uppercase'>
+                  <h1 className='md:text-[6rem] text-5xl   text-primary-color font-medium uppercase'>
                     Web for human
                   </h1>
                 </div>
-                <h1 className='text-[5rem] font-medium text-primary-color uppercase'>
+                <h1 className='md:text-[5rem] text-5xl font-medium text-primary-color uppercase'>
                   Not for{' '}
                   <span className=' line-through font-light text-red-500'>
                     Robots
                   </span>
                 </h1>
               </div>
-              <div className=' absolute bottom-0 right-0 z-10'>
+              <div className=' md:absolute bottom-0 right-0 z-10 hidden'>
                 <video
                   autoPlay
                   loop
@@ -50,13 +50,13 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className='absolute right-10 top-[30%] z-10'>
+          <div className='md:absolute right-10 top-[30%] z-10 hidden'>
             <SideNav />
           </div>
         </div>
       </div>
       <Marquee className='mt-5'>
-        <h1 className='text-[10rem] font-semibold uppercase text-primary-bg-color'>
+        <h1 className='md:text-[10rem] text-[5rem] font-semibold uppercase text-primary-bg-color'>
           I can be a React component, multiple React components, or just some
           text.
         </h1>

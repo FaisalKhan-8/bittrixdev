@@ -9,9 +9,9 @@ const Portfolio = () => {
     <div id='portfolio' className='h-full flex items-center justify-center'>
       <div className='w-full h-full flex flex-col items-start justify-start gap-5  p-10 '>
         <div className=' flex flex-col items-left justify-center gap-5 w-full'>
-          <h1 className='text-xl'>03 — Our Portfolio </h1>
-          <h3 className='text-5xl'>We don&apos;t do cookie cutter solutions</h3>
-          <p className=' text-3xl text-text-color w-[35%] text-wrap font-light'>
+          <h1 className='md:text-xl text-lg'>03 — Our Portfolio </h1>
+          <h3 className='md:text-5xl text-3xl'>We don&apos;t do cookie cutter solutions</h3>
+          <p className=' text-3xl text-text-color md:w-[35%] text-wrap font-light'>
             Our user-centered design encourages productivity and boosts revenue.
           </p>
         </div>
