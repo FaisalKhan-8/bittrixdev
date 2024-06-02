@@ -3,24 +3,28 @@ import phone1 from "../../public/assets/phone-01.webp";
 import phone2 from "../../public/assets/phone-02.webp";
 import Image from "next/image";
 import { Vortex } from "@/components/ui/vortex";
+import Marquee from "react-fast-marquee";
 
 const SmartDev = () => {
   return (
     <Vortex
       backgroundColor="black"
       baseHue="280"
-      className=" w-full  h-full flex items-center justify-center"
+      className=" min-w-full h-full flex items-center justify-center"
     >
-      <div className="h-screen w-full flex items-center justify-center ">
-        <div className="w-full h-full flex flex-col items-start justify-between p-10 relative">
+      <div className="h-screen min-w-full flex items-center justify-center ">
+        <div className="min-w-full h-full flex flex-col items-start justify-between p-10 relative">
           <div className="flex flex-col items-left justify-center">
             <h1 className=" text-text-color text-8xl">{"{" + "SMART" + "}"}</h1>
             <h1 className="text-text-color text-8xl">DEVELOPMENT</h1>
           </div>
           <div className=" w-full flex items-center justify-center">
-            <h1 className=" text-text-color text-9xl uppercase">
-              back ground text
-            </h1>
+            <Marquee className=" -z-50">
+              <h1 className="text-[9rem] font-semibold uppercase text-text-color">
+                I can be a React component, multiple React components, or just
+                some text.
+              </h1>
+            </Marquee>
           </div>
           <div className="w-full flex items-center justify-between">
             <p className="w-1/4 text-wrap text-text-color text-xl">
