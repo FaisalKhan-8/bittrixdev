@@ -452,13 +452,7 @@ const colors = ["#D95B43", "#D98E43", "#D9B943", "#D9D943"];
                 }}
                 className="div"
               >
-                <h2 className="text-center text-xl md:text-4xl font-bold text-black ">
-                  We sell soap worldwide
-                </h2>
-                <p className="text-center text-base md:text-2xl font-normal text-text-color max-w-md mt-2 mx-auto">
-                  This globe is interactive and customizable. Have fun with it,
-                  and don&apos;t forget to share it. :)
-                </p>
+               
               </motion.div>
               
               <div className="absolute w-full -bottom-20 mb-10  h-96 md:h-full z-10">
