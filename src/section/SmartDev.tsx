@@ -20,7 +20,7 @@ const SmartDev = () => {
           </div>
           <div className=" w-full flex items-center justify-center">
             <Marquee className=" -z-50">
-              <h1 className="md:text-[9rem] text-[6rem]  font-semibold uppercase text-text-color">
+              <h1 className="md:text-[9rem] text-[6rem]  font-semibold uppercase text-gray-800">
                 I can be a React component, multiple React components, or just
                 some text.
               </h1>
