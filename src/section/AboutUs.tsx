@@ -1,10 +1,10 @@
-import React from "react";
-import { about } from "../../public/data/data";
-import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
+import React from 'react';
+import { about } from '../../public/data/data';
+import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 
 const World = dynamic(
-  () => import("@/components/ui/globe").then((m) => m.World),
+  () => import('@/components/ui/globe').then((m) => m.World),
   {
     ssr: false,
   }
@@ -12,29 +12,28 @@ const World = dynamic(
 
 const AboutUs = () => {
   const globeConfig = {
-  pointSize: 4,
-  globeColor: "#0B486B",
-  showAtmosphere: true,
-  atmosphereColor: "#ffffff",
-  atmosphereAltitude: 0.1,
-  emissive: "#0B486B",
-  emissiveIntensity: 0.1,
-  shininess: 0.9,
-  polygonColor: "rgba(255,255,255,0.7)",
-  ambientLight: "#4A89DC",
-  directionalLeftLight: "#ffffff",
-  directionalTopLight: "#ffffff",
-  pointLight: "#ffffff",
-  arcTime: 1000,
-  arcLength: 0.9,
-  rings: 1,
-  maxRings: 3,
-  initialPosition: { lat: 22.3193, lng: 114.1694 },
-  autoRotate: true,
-  autoRotateSpeed: 0.5,
-};
-const colors = ["#D95B43", "#D98E43", "#D9B943", "#D9D943"];
-
+    pointSize: 4,
+    globeColor: '#0B486B',
+    showAtmosphere: true,
+    atmosphereColor: '#ffffff',
+    atmosphereAltitude: 0.1,
+    emissive: '#0B486B',
+    emissiveIntensity: 0.1,
+    shininess: 0.9,
+    polygonColor: 'rgba(255,255,255,0.7)',
+    ambientLight: '#4A89DC',
+    directionalLeftLight: '#ffffff',
+    directionalTopLight: '#ffffff',
+    pointLight: '#ffffff',
+    arcTime: 1000,
+    arcLength: 0.9,
+    rings: 1,
+    maxRings: 3,
+    initialPosition: { lat: 22.3193, lng: 114.1694 },
+    autoRotate: true,
+    autoRotateSpeed: 0.5,
+  };
+  const colors = ['#D95B43', '#D98E43', '#D9B943', '#D9D943'];
 
   // Apply colors to globeConfig
   globeConfig.globeColor = colors[0]; // Set the globe color to the first color in the array
@@ -404,40 +403,39 @@ const colors = ["#D95B43", "#D98E43", "#D9B943", "#D9D943"];
   ];
 
   return (
-    <div id="about" className=" flex items-center justify-between ">
-      <div className="w-full h-full flex flex-col items-start justify-start gap-10 overflow-hidden p-10 ">
-        <div className=" flex flex-col items-left justify-center gap-5 w-full">
-          <h1 className="md:text-xl text-lg">02-About Us</h1>
-          <h3 className="md:text-5xl text-2xl">We Strive to Innovate</h3>
-          <hr  />
-          <p className=" md:text-3xl text-xl md:w-[50%] text-text-color text-wrap font-light">
-            <span className="font-semibold text-black">Solid Strategy</span>{" "}
+    <div id='about' className=' flex items-center justify-between '>
+      <div className='w-full h-full flex flex-col items-start justify-start  overflow-hidden p-10 '>
+        <div className=' flex flex-col items-left justify-center gap-5 w-full'>
+          <h1 className='md:text-xl text-lg'>02-About Us</h1>
+          <h3 className='md:text-5xl text-2xl'>We Strive to Innovate</h3>
+          <hr />
+          <p className=' md:text-3xl text-xl md:w-[50%] text-text-color text-wrap font-light'>
+            <span className='font-semibold text-black'>Solid Strategy</span>{' '}
             aligned withbusiness needs and robust data analysis are fundamental
             ingredients to extract actionable insights.
           </p>
         </div>
-        <div className="w-full h-full flex md:flex-row flex-col items-center justify-between">
-          <div className="grid md:grid-cols-2 md:grid-rows-2 gap-3 h-full md:w-[50%]">
+        <div className='w-full h-full flex md:flex-row flex-col items-center justify-between'>
+          <div className='grid md:grid-cols-2 md:grid-rows-2 gap-3 h-full md:w-[50%]'>
             {about.map((curr, i) => (
               <div
                 key={i}
-                className="aboutItem  flex flex-col items-left justify-end  p-4"
-              >
-                <video autoPlay loop muted playsInline className="serviceVideo">
-                  <source src={curr.video} type="video/mp4" />
+                className='aboutItem  flex flex-col items-left justify-end  p-4'>
+                <video autoPlay loop muted playsInline className='serviceVideo'>
+                  <source src={curr.video} type='video/mp4' />
                 </video>
-                <h1 className=" text-primary-color text-3xl uppercase font-bold">
+                <h1 className=' text-primary-color text-3xl uppercase font-bold'>
                   {curr.title}
                 </h1>
-                <p className=" text-text-color text-xl text-wrap  w-full">
+                <p className=' text-text-color text-xl text-wrap  w-full'>
                   {curr.description}
                 </p>
               </div>
             ))}
           </div>
           {/* Globe */}
-       <div className="flex flex-row items-center justify-center py-20 h-[70vh] md:h-auto  bg-white relative w-full ">
-            <div className="max-w-5xl mx-auto w-full relative overflow-hidden h-full md:h-[42rem] px-2  ">
+          <div className='flex flex-row items-center justify-center  min-h-screen md:h-auto  bg-white relative w-full '>
+            <div className='max-w-5xl mx-auto w-full relative overflow-hidden h-full md:h-[42rem] px-2  '>
               <motion.div
                 initial={{
                   opacity: 0,
@@ -450,19 +448,15 @@ const colors = ["#D95B43", "#D98E43", "#D9B943", "#D9D943"];
                 transition={{
                   duration: 1,
                 }}
-                className="div"
-              >
-               
-              </motion.div>
-              
-              <div className="absolute w-full -bottom-20 mb-10  h-96 md:h-full z-10">
+                className='div'></motion.div>
+
+              <div className='absolute w-full -bottom-20 mb-10  h-96 md:h-full z-10'>
                 <World data={sampleArcs} globeConfig={globeConfig} />;
               </div>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
