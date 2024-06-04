@@ -13,7 +13,7 @@ const SmartDev = () => {
       className=" min-w-full h-full flex items-center justify-center"
     >
       <div className="h-screen min-w-full flex items-center justify-center ">
-        <div className="min-w-full h-full flex flex-col items-start justify-between p-10 relative">
+        <div className="min-w-full h-full flex flex-col items-start justify-between py-10 relative">
           <div className="flex flex-col items-left justify-center">
             <h1 className=" text-text-color md:text-8xl text-5xl">{"{" + "SMART" + "}"}</h1>
             <h1 className="text-text-color md:text-8xl text-5xl">DEVELOPMENT</h1>
