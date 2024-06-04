@@ -61,7 +61,7 @@ const Footer = () => {
               <FaArrowRightLong />
             </button>
             <p className="text-gray-400">
-              Don't like the forms? Drop us a line via email.
+              Don&apos;t like the forms? Drop us a line via email.
             </p>
             <p className="text-white">info@bittrixdev.com</p>
           </div>
