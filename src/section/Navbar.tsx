@@ -12,9 +12,11 @@ const sectionLinks = [
 ];
 
 const Navbar = () => {
+ 
+
   return (
     <nav className=' w-full flex items-center justify-center'>
-      <div className='w-[90%] grid md:grid-cols-3 grid-cols-2 mt-36 px-4 z-10 absolute'>
+      <div className='w-[90%] grid lg:grid-cols-3 grid-cols-2 mt-36 px-4 z-10 absolute'>
         <div className='flex items-center justify-start '>
         <div className="relative w-[50px] h-[50px]">
             <Image
@@ -26,8 +28,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className=' bg-primary-color md:flex hidden items-center justify-evenly border rounded-3xl p-2 w-full'>
-          {sectionLinks.map(({ name, link }, index) => (
+        <ul className='bg-primary-color lg:flex  hidden items-center justify-evenly border rounded-3xl p-2 w-full'>
+          {sectionLinks.map(({ name, link }) => (
             <li
               key={name}
               className='text-text-black font-semibold'>
@@ -42,7 +44,7 @@ const Navbar = () => {
         </ul>
 
         <div className='flex items-center justify-end gap-2  '>
-          <span className='border p-2 md:block hidden rounded-full bg-primary-color text-gray-500'>
+          <span className='border p-2 lg:block hidden rounded-full bg-primary-color text-gray-500'>
             Become a Client
           </span>
          
