@@ -1,70 +1,88 @@
-import React, { useEffect, useState } from 'react';
-import Logo from './Logo';
-import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useState } from "react";
+import Logo from "./Logo";
+import { AnimatePresence, motion } from "framer-motion";
 
 function Loader({ isLoading, setIsLoading }: any) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading();
-    }, 1900);
+    }, 2900);
   }, [setIsLoading]);
   return (
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className='loader'
+          className="loader"
           exit={{ scale: 0 }}
-          key='motiondivleave'
+          key="motiondivleave"
           transition={{
             duration: 0.45,
-            ease: 'easeInOut',
-          }}>
+            ease: "easeInOut",
+          }}
+        >
           <motion.svg
-            id='logo'
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 100 100'>
+            id="logo"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+          >
             <title>Logo</title>
             <g>
-              <g
-                id='K'
-                transform='translate(35.000000, 35.000000)'>
+              <g id="B" transform="translate(35.000000, 35.000000)">
                 <motion.path
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0, rotate: 0 }}
+                  animate={{ opacity: 1, rotate: 360 }}
                   transition={{
-                    duration: 1,
-                    ease: 'easeInOut',
-                    delay: 1,
+                    duration: 1.5,
+                    ease: "easeInOut",
+                    delay: 0.5,
                   }}
-                  exit={{
-                    scale: 2,
-                  }}
-                  fill='currentColor'
-                  d='M21 10C22 10 23 10 23 9L22.8477 4.7305C22.9727 4.582 23.0039 4.375 22.9258 4.1992 22.8477 4.0195 22.6758 3.9063 22.4883 3.9063L18.6836 3.9063C18.5469 3.9063 18 4 18.3242 4.0664L11 4 10 4C10 4 10.2109 3.9063 9.9453 3.9063L6.5664 3.9063C6.3008 3.9063 6.0859 4.1289 6.0859 4.3984L6 30C6 31 10.5 31 10.5 30L10.5 20H19C19.3333 19.6667 19.6667 19.3333 20 19 20 20 20 18 20 17L20 16C20 15 18 15 18 15L11 15h.5H10.5L10.5 10 17 10 19 10Z'
+                  exit={{ scale: 2 }}
+                  fill="url(#grad1)" // Gradient fill
+                  d="M10 4h8c2.5 0 4.5 1 6 2.5C26.5 8.5 27 10 27 12c0 2-0.5 3.5-1.5 4.5-1 1-2.5 1.5-4 2 2 0.5 3.5 1.5 4.5 3 1 1.5 1.5 3 1.5 5 0 2-0.5 4-2 5.5-1.5 1.5-3.5 2.5-6 2.5h-8V4zm4 3v7h4c1.5 0 2.5-0.5 3-1.5 0.5-1 0.5-1.5 0-2.5-0.5-1-1.5-1.5-3-1.5h-4zm0 10v8h4c1.5 0 2.5-0.5 3-1.5 0.5-1 0.5-2 0-3-0.5-1-1.5-1.5-3-1.5h-4z"
                 />
               </g>
               <motion.path
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
                 transition={{
-                  duration: 1,
-                  ease: 'easeInOut',
+                  duration: 1.5,
+                  ease: "easeInOut",
                 }}
-                exit={{
-                  scale: 2,
-                }}
-                stroke='currentColor'
-                strokeWidth='5'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                d='M 50, 5
-          L 11, 27
-          L 11, 72
-          L 50, 95
-          L 89, 73
-          L 89, 28 z'
+                exit={{ scale: 2 }}
+                stroke="url(#grad2)" // Gradient stroke
+                strokeWidth="5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M 50, 5
+              L 11, 27
+              L 11, 72
+              L 50, 95
+              L 89, 73
+              L 89, 28 z"
               />
             </g>
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop
+                  offset="0%"
+                  style={{ stopColor: "#000", stopOpacity: 1 }}
+                />
+                <stop
+                  offset="100%"
+                  style={{ stopColor: "#fe5930", stopOpacity: 1 }}
+                />
+              </linearGradient>
+              <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop
+                  offset="0%"
+                  style={{ stopColor: "#000", stopOpacity: 1 }}
+                />
+                <stop
+                  offset="100%"
+                  style={{ stopColor: "#fe5930", stopOpacity: 1 }}
+                />
+              </linearGradient>
+            </defs>
           </motion.svg>
         </motion.div>
       )}
