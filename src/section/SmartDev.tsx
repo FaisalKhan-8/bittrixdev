@@ -15,8 +15,12 @@ const SmartDev = () => {
       <div className="h-screen min-w-full flex items-center justify-center ">
         <div className="min-w-full h-full flex flex-col items-start justify-between py-10 relative">
           <div className="flex flex-col items-left justify-center">
-            <h1 className=" text-text-color md:text-8xl text-5xl">{"{" + "SMART" + "}"}</h1>
-            <h1 className="text-text-color md:text-8xl text-5xl">DEVELOPMENT</h1>
+            <h1 className=" text-text-color md:text-8xl text-5xl">
+              {"{" + "SMART" + "}"}
+            </h1>
+            <h1 className="text-text-color md:text-8xl text-5xl">
+              DEVELOPMENT
+            </h1>
           </div>
           <div className=" w-full flex items-center justify-center">
             <Marquee className=" -z-50">
@@ -41,11 +45,23 @@ const SmartDev = () => {
             </div>
           </div>
           <div className="flex items-center  justify-center absolute  top-[30%] md:left-[40%] left-[20%] ">
-            <Image src={phone1} alt="phonn1" className="md:w-[300px] object-cover w-[250px] " />
             <Image
-              src={phone2}
-              alt="phonn1"
-              className="md:w-[300px] w-[250px] object-cover absolute md:left-[50%] left-[20%] top-[30%] "
+              src={
+                "https://res.cloudinary.com/bittrixdev/image/upload/v1725863277/phone-01_nnsxud.webp"
+              }
+              alt="phone1"
+              width={300} // Provide width
+              height={500} // Provide height
+              className="md:w-[300px] object-cover w-[250px]"
+            />
+            <Image
+              src={
+                "https://res.cloudinary.com/bittrixdev/image/upload/v1725863252/phone-02_zlfwhb.webp"
+              }
+              alt="phone2"
+              width={300} // Provide width
+              height={500} // Provide height
+              className="md:w-[300px] w-[250px] object-cover absolute md:left-[50%] left-[20%] top-[30%]"
             />
           </div>
         </div>
