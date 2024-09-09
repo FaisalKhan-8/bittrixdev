@@ -17,15 +17,7 @@ const Navbar = () => {
       <div className="w-[90%] grid lg:grid-cols-3 grid-cols-2 mt-24 px-4 z-10 absolute">
         <div className="flex items-center justify-start ">
           <div className="relative w-[50px] h-[50px]">
-            <Image
-              src={Logo}
-              alt="logo"
-              className="rounded-full "
-              style={{
-                filter:
-                  "invert(42%) sepia(77%) saturate(2121%) hue-rotate(341deg) brightness(101%) contrast(101%)",
-              }}
-            />
+            <Image src={Logo} alt="logo" className="rounded-full " />
           </div>
         </div>
 

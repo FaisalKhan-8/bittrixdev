@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="w-full h-full flex items-center justify-center overflow-hidden absolute top-0 ">
           <Spline scene="https://prod.spline.design/bUqW5bou1J2TlDJv/scene.splinecode" />
 
-          <div className="md:block absolute right-5 top-[30%] z-10 hidden">
+          <div className="md:block absolute right-5 top-[30%] hidden">
             <SideNav />
           </div>
         </div>

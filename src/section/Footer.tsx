@@ -38,15 +38,18 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-5 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="flex flex-col gap-5 lg:gap-10">
           <div className="flex items-center justify-start">
-          <div className=" w-[100px] h-[100px]">
-          <div className=" w-[100px] h-[100px]">
-              <Image
-                src={Logo}
-                alt="logo"
-                className="rounded-full shadow-lg transition-transform duration-300 transform hover:scale-110"
-                style={{ filter: 'invert(42%) sepia(77%) saturate(2121%) hue-rotate(341deg) brightness(101%) contrast(101%)' }}
-              />
-            </div>
+            <div className=" w-[100px] h-[100px]">
+              <div className=" w-[100px] h-[100px]">
+                <Image
+                  src={Logo}
+                  alt="logo"
+                  className="rounded-full shadow-lg transition-transform duration-300 transform hover:scale-110"
+                  style={{
+                    filter:
+                      "invert(42%) sepia(77%) saturate(2121%) hue-rotate(341deg) brightness(101%) contrast(101%)",
+                  }}
+                />
+              </div>
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -54,7 +57,8 @@ const Footer = () => {
           </h1>
           <div className="flex flex-col items-start gap-5">
             <p className="text-gray-400">
-              Feel free to reach out if you want to collaborate with us, or simply have a chat.
+              Feel free to reach out if you want to collaborate with us, or
+              simply have a chat.
             </p>
             <button className=" bg-primary-bg-color hover:bg-orange-800 text-white py-3 px-6 rounded-full flex items-center gap-3 transition-all duration-300">
               Become a Client
@@ -67,7 +71,9 @@ const Footer = () => {
           </div>
           <p className="flex items-center text-gray-400">
             © BittrixDev {new Date().getFullYear()}. All rights reserved
-            <span className="font-semibold underline ml-2 cursor-pointer hover:text-gray-300 transition-all duration-300">Privacy Policy</span>
+            <span className="font-semibold underline ml-2 cursor-pointer hover:text-gray-300 transition-all duration-300">
+              Privacy Policy
+            </span>
           </p>
         </div>
         <div className="flex flex-col md:items-center md:justify-center justify-start">
@@ -97,7 +103,9 @@ const Footer = () => {
               <h1 className="text-lg font-semibold">Services</h1>
               {ServiceData.map((item, index) => (
                 <Link key={index} href={item.link}>
-                  <p className="text-gray-400 cursor-pointer hover:text-gray-300 transition-all duration-300">{item.title}</p>
+                  <p className="text-gray-400 cursor-pointer hover:text-gray-300 transition-all duration-300">
+                    {item.title}
+                  </p>
                 </Link>
               ))}
             </div>
