@@ -6,8 +6,8 @@ import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const HamburgerMenu = () => {
   const [toggle, setToggle] = useState(false);
-  const menuRef = useRef(null);
-  const navLinksRef = useRef([]);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const navLinksRef = useRef<(HTMLAnchorElement | null)[]>([]);
   const navLinks = [
     { name: "Home", link: "/" },
     { name: "Our Services", link: "/#services" },
@@ -24,19 +24,21 @@ const HamburgerMenu = () => {
   useEffect(() => {
     if (toggle) {
       // Open menu with sliding down effect
-      gsap.fromTo(
-        menuRef.current,
-        { height: 0, opacity: 0 },
-        {
-          height: "100%",
-          opacity: 1,
-          duration: 0.6,
-          ease: "power3.out",
-          onStart: () => {
-            menuRef.current.style.display = "block"; // Make sure the menu is visible
-          },
-        }
-      );
+      if (menuRef.current) {
+        gsap.fromTo(
+          menuRef.current,
+          { height: 0, opacity: 0 },
+          {
+            height: "100%",
+            opacity: 1,
+            duration: 0.6,
+            ease: "power3.out",
+            onStart: () => {
+              menuRef.current!.style.display = "block"; // Make sure the menu is visible
+            },
+          }
+        );
+      }
 
       // Sequentially reveal each nav link from left to right
       gsap.fromTo(
@@ -52,15 +54,17 @@ const HamburgerMenu = () => {
       );
     } else {
       // Close menu with sliding up effect
-      gsap.to(menuRef.current, {
-        height: 0,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power3.in",
-        onComplete: () => {
-          menuRef.current.style.display = "none"; // Ensure the menu is not clickable
-        },
-      });
+      if (menuRef.current) {
+        gsap.to(menuRef.current, {
+          height: 0,
+          opacity: 0,
+          duration: 0.6,
+          ease: "power3.in",
+          onComplete: () => {
+            menuRef.current!.style.display = "none"; // Ensure the menu is not clickable
+          },
+        });
+      }
     }
   }, [toggle]);
 
@@ -85,6 +89,13 @@ const HamburgerMenu = () => {
         });
       });
     });
+
+    return () => {
+      navItems.forEach((item) => {
+        item.removeEventListener("mouseenter", () => {});
+        item.removeEventListener("mouseleave", () => {});
+      });
+    };
   }, [toggle]);
 
   return (
@@ -136,7 +147,9 @@ const HamburgerMenu = () => {
                   href={link.link}
                   className="nav-item text-white text-5xl md:text-5xl lg:text-8xl font-bold overflow-hidden transition-all duration-300 ease-in-out hover:text-gray-200"
                   onClick={handleClick}
-                  ref={(el) => (navLinksRef.current[index] = el)} // Collect refs
+                  ref={(el) => {
+                    navLinksRef.current[index] = el;
+                  }} // Updated ref assignment
                 >
                   {link.name}
                   {/* Underline effect */}
