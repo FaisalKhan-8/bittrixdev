@@ -1,17 +1,20 @@
-'use client';
+// pages/index.jsx
+"use client";
 
-import Footer from '@/section/Footer';
-import Hero from '@/section/Hero';
-import Navbar from '@/section/Navbar';
-import Loader from '@/components/Loader';
-import { useState } from 'react';
-import Service from '@/section/Service';
-import AboutUs from '@/section/AboutUs';
-import SmartDev from '@/section/SmartDev';
-import HoldingPhone from '@/section/HoldingPhone';
-import Portfolio from '@/section/Portfolio';
-import LatestCase from '@/section/LatestCase';
-import Testimonial from '@/section/Testimonial';
+import { useState, Suspense, lazy } from "react";
+import Footer from "@/section/Footer";
+import Loader from "@/components/Loader";
+import CustomCursor from "@/components/CustomCursor";
+
+// Lazy loading sections
+const Navbar = lazy(() => import("@/section/Navbar"));
+const Hero = lazy(() => import("@/section/Hero"));
+const Service = lazy(() => import("@/section/Service"));
+const AboutUs = lazy(() => import("@/section/AboutUs"));
+const SmartDev = lazy(() => import("@/section/SmartDev"));
+const Portfolio = lazy(() => import("@/section/Portfolio"));
+const LatestCase = lazy(() => import("@/section/LatestCase"));
+const Testimonial = lazy(() => import("@/section/Testimonial"));
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,28 +24,37 @@ export default function Home() {
     setIsLoading(false);
     setTimeout(() => setShowContent(true), 450);
   };
+
   return (
-    <div className=' overflow-hidden'>
+    <div className="overflow-hidden relative">
+      {/* Custom cursor */}
+      <CustomCursor />
+
+      {/* Show content only when the loader is finished */}
       {showContent && (
         <>
-          <Navbar />
-          <main>
-            <Hero />
-            <Service />
-            <AboutUs />
-            <SmartDev />
-            {/* <HoldingPhone /> */}
-            <Portfolio />
-            <LatestCase />
-            <Testimonial />
-          </main>
-          <Footer />
+          <Suspense
+            fallback={
+              <Loader isLoading={isLoading} onLoaded={handleLoaderLoaded} />
+            }
+          >
+            <Navbar />
+            <main>
+              <Hero />
+              <Service />
+              <AboutUs />
+              <SmartDev />
+              <Portfolio />
+              <LatestCase />
+              <Testimonial />
+            </main>
+            <Footer />
+          </Suspense>
         </>
       )}
-      <Loader
-        isLoading={isLoading}
-        setIsLoading={handleLoaderLoaded}
-      />
+
+      {/* Loader component, it will call onLoaded when done */}
+      <Loader isLoading={isLoading} onLoaded={handleLoaderLoaded} />
     </div>
   );
 }

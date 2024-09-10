@@ -1,13 +1,20 @@
-import React, { useEffect, useState } from "react";
-import Logo from "./Logo";
+import React, { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-function Loader({ isLoading, setIsLoading }: any) {
+function Loader({
+  isLoading,
+  onLoaded,
+}: {
+  isLoading: boolean;
+  onLoaded: () => void;
+}) {
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading();
-    }, 2900);
-  }, [setIsLoading]);
+    const timeout = setTimeout(() => {
+      onLoaded(); // Call the onLoaded callback when loading is complete
+    }, 2900); // Simulate loading delay
+    return () => clearTimeout(timeout); // Cleanup timeout when component unmounts
+  }, [onLoaded]);
+
   return (
     <AnimatePresence>
       {isLoading && (
