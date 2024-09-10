@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "@/../../public/assets/Logo.svg";
 import Hamburger from "@/components/Hamburger";
+import ContactModal from "@/components/ContactModal";
 
 const sectionLinks = [
   { name: "About Us", link: "/#about" },
@@ -12,6 +13,7 @@ const sectionLinks = [
 ];
 
 const Navbar = () => {
+  const [isContactOpen, setContactOpen] = useState(false);
   return (
     <nav className=" w-full flex items-center justify-center">
       <div className="w-[90%] grid lg:grid-cols-3 grid-cols-2 mt-24 px-4 z-10 absolute">
@@ -29,7 +31,18 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li className="text-text-black font-semibold">Contact Us</li>
+          <li
+            onClick={() => setContactOpen(!isContactOpen)}
+            className="text-text-black font-semibold cursor-pointer"
+          >
+            Contact Us
+            {isContactOpen && (
+              <ContactModal
+                isOpen={isContactOpen}
+                onClose={() => setContactOpen(false)}
+              />
+            )}
+          </li>
         </ul>
 
         <div className="flex items-center justify-end gap-2  ">
